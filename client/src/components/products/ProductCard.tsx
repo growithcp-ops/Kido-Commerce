@@ -50,11 +50,13 @@ export function ProductCard({ product, index = 0 }: ProductCardProps) {
     >
       <Link href={`/product/${product.id}`} data-testid={`card-product-${product.id}`}>
         <div className="group bg-white rounded-3xl overflow-hidden shadow-card hover-lift border border-muted/50 cursor-pointer">
-          <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-kido-yellow-light/30 to-white">
+          <div className="relative aspect-[3/4] overflow-hidden bg-gradient-to-br from-kido-yellow-light/30 to-white">
             <img
               src={productImage}
               alt={product.name}
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              loading="lazy"
+              decoding="async"
             />
             
             {product.badge && (

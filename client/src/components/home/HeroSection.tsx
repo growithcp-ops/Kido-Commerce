@@ -2,6 +2,9 @@ import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Sparkles, Star } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
+
+// Import hero image with optimized loading
 import heroImage from '@assets/generated_images/playful_toy_store_hero_illustration.png';
 
 export function HeroSection() {
@@ -119,6 +122,8 @@ export function HeroSection() {
                 src={heroImage}
                 alt="Happy children playing with toys"
                 className="w-full h-full object-cover"
+                loading="eager"
+                fetchPriority="high"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
             </div>

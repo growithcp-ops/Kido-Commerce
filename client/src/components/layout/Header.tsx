@@ -71,18 +71,8 @@ export function Header() {
             </div>
 
             <div className="flex items-center gap-2 md:gap-3">
-              <Button
-                variant="ghost"
-                size="icon"
-                className="md:hidden rounded-full"
-                onClick={() => setSearchOpen(!searchOpen)}
-                data-testid="button-search-mobile"
-              >
-                <Search className="w-5 h-5" />
-              </Button>
-
               <Link href="/wishlist">
-                <Button variant="ghost" size="icon" className="rounded-full hidden sm:flex" data-testid="button-wishlist">
+                <Button variant="ghost" size="icon" className="rounded-full" data-testid="button-wishlist">
                   <Heart className="w-5 h-5" />
                 </Button>
               </Link>
@@ -99,7 +89,7 @@ export function Header() {
               </Link>
 
               <Link href="/login">
-                <Button variant="ghost" size="icon" className="rounded-full hidden sm:flex" data-testid="button-login">
+                <Button variant="ghost" size="icon" className="rounded-full" data-testid="button-login">
                   <User className="w-5 h-5" />
                 </Button>
               </Link>
@@ -107,7 +97,7 @@ export function Header() {
               <Button
                 variant="ghost"
                 size="icon"
-                className="lg:hidden rounded-full"
+                className="rounded-full"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 data-testid="button-menu"
               >

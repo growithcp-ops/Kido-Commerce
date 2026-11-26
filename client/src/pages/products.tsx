@@ -325,7 +325,7 @@ export default function ProductsPage() {
 
             {filteredProducts.length > 0 ? (
               <div className={`grid gap-4 md:gap-6 ${
-                gridSize === 'large' ? 'grid-cols-2 lg:grid-cols-3' : 'grid-cols-2 sm:grid-cols-3 lg:grid-cols-4'
+                gridSize === 'large' ? 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3' : 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-4'
               }`}>
                 {filteredProducts.map((product, index) => (
                   <ProductCard key={product.id} product={product} index={index} />
